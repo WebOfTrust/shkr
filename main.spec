@@ -8,7 +8,8 @@ a = Analysis(
     ['shkr/main.py'],
     pathex=[],
     binaries=[
-        ('libsodium.23.dylib', '.')
+        ('libsodium.23.arm.dylib', '.'),
+        ('libsodium.23.i386.dylib', '.')
     ],
     hiddenimports=[],
     hookspath=[],

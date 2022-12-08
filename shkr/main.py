@@ -1,11 +1,12 @@
 import os
 import shutil
-
+import platform
 import rumps
 
 
 def main():
-    sodium = 'libsodium.23.dylib'
+    sodium = 'libsodium.23.arm.dylib' if platform.processor() == 'arm' else 'libsodium.23.i386.dylib'
+    print(sodium)
     lib_home = os.path.expanduser("~/lib")
     if not os.path.exists(lib_home):
         os.makedirs(lib_home)
